@@ -1,0 +1,73 @@
+/* Стили для шапки сайта */
+.Input{
+    font-size: 1.1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-top: 3.5vh;
+    padding-right: 4vh;
+    display: inline-block;
+    float: right;
+}
+
+.Logo{
+    font-family: 'Splash', cursive;
+    font-size: 1.6rem;
+    padding: 3vh;
+    display: inline-block;
+}
+
+.Menu{
+    background: #0c6b52;
+    border-bottom: #7fada2 solid 0.15vh;
+    position: fixed;
+    width: 100%;
+}
+
+.Menu a{
+    text-decoration: none;
+    color: #7fada2;
+}
+
+.Logo a:hover{
+    color: #7fada2;
+}
+
+.Input:hover{
+    color: #7fada2;
+    text-decoration: underline;
+}
+
+/* Стили для основного контента */
+main{
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-top: 12vh;
+    padding-left: 2vh;
+    background: #062e24;
+    color: #7fada2;
+    min-height: 80vh;
+}
+
+/* Стили для footer, картинок VK, GitHub */
+footer{
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #0c6b52;
+    color: #7fada2;
+    height: 20vh;
+    border-top: #7fada2 solid 0.15vh;
+}
+
+footer h2{
+    font-weight: bolder;
+}
+
+.info_dev{
+    padding-top: 2vh;
+    padding-left: 2vh;
+}
+
+.VK{
+    width: 5vh;
+}
+
+.GitHub{
+    width: 4.5vh;
+}
