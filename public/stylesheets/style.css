@@ -71,3 +71,83 @@ footer h2{
 .GitHub{
     width: 4.5vh;
 }
+
+/* Стили для странички login */
+.form{
+    max-height: 60vh;
+    max-width: 60vh;
+    margin: 0 auto;
+    border: #7fada2 solid 0.15vh;
+    border-radius: 2vh;
+    background: #0c6b52;
+}
+
+.form input{
+    display: block;
+    margin: 4vh auto 3vh auto;
+    border: none;
+}
+
+#Login, #Password{
+    width: 30vh;
+    height: 4vh;
+    border-radius: 1vh;
+}
+
+.log{
+    max-width: 12vh;
+    max-height: 12vh;
+    margin: 1vh auto auto auto;
+    font-weight: bolder;
+    font-size: 5vh;
+}
+
+.login-parent{
+    margin-top: 10vh;
+}
+
+.Login_button{
+    background: #062e24;
+    color: #7fada2;
+    width: 10vh;
+    height: 4vh;
+    border-radius: 1vh;
+}
+
+.Login_button:hover{
+    color: #0c6b52;
+}
+
+#Error{
+    max-width: 30vh;
+    max-height: 12vh;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+    color: darkred;
+}
+
+/* Стили для странички регистрации */
+.reg{
+    max-width: 26vh;
+    max-height: 12vh;
+    margin: 1vh auto auto auto;
+    font-weight: bolder;
+    font-size: 5vh;
+}
+
+.Reg_button{
+    background: #062e24;
+    color: #7fada2;
+    width: 20vh;
+    height: 4vh;
+    border-radius: 1vh;
+}
+
+.Reg_button:hover{
+    color: #0c6b52;
+}
+
+.registration-parent{
+    margin-top: 10vh;
+}
