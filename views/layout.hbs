@@ -13,17 +13,19 @@
   </head>
   <body>
     <header>
-      <nav class="Menu">
-          <div class="Logo"><a href="/">MyLibrary</a></div>
-          <a class="Input" href="/registration">Регистрация</a>
-          <a class="Input" href="/login">Войти</a>
-      </nav>
+        <nav class="Menu">
+            <div class="Logo"><a href="/">MyLibrary</a></div>
+            {{#if Auth}}
+                <a class="Input" href="#">Личный кабинет</a>
+            {{else}}
+                <a class="Input" href="/registration">Регистрация</a>
+                <a class="Input" href="/login">Войти</a>
+            {{/if}}
+        </nav>
     </header>
-
     <main>
         {{{body}}}
     </main>
-
     <footer class="Info">
         <div class="info_dev">
             <h2>Информация</h2>

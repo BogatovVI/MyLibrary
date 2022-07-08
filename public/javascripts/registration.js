@@ -1,4 +1,4 @@
-document.querySelector("#button_reg").onclick = () => {
+document.querySelector("#button_reg").onclick = async() => {
     let Login = document.getElementById("Login").value;
     let Password = document.getElementById("Password").value;
     let error = document.getElementById("Error");
@@ -16,5 +16,25 @@ document.querySelector("#button_reg").onclick = () => {
     }
     else{
         error.textContent = "";
+        let data = {
+            username: Login,
+            password: Password
+        }
+        let headers = {
+            'Content-Type': 'application/json'
+        }
+        let response = await fetch('/registration', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: headers
+        })
+        let json = await response.json();
+        const {message} = json;
+        if (response.status === 200){
+            window.location.href = '/login';
+        }
+        else{
+            error.textContent = message;
+        }
     }
 }

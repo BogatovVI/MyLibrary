@@ -1,22 +1,23 @@
 const express = require('express');
 const router = express.Router();
+const authController = require('../controllers/authControllers')
+const authMiddleware = require('../middleware/authMiddleware')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home'});
+router.get('/', authMiddleware, function(req, res, next) {
+  res.render('index', { title: 'Home', Auth: req.isAuth});
 });
 
-router.get('/login', function (req, res, next){
-  res.render('login', {title: 'Войти'});
+router.get('/login', authMiddleware, function (req, res, next){
+  res.render('login', {title: 'Войти', Auth: req.isAuth});
 });
 
-router.post('/login', function (req,res,next){
-  console.log(res);
-  res.redirect("registration");
+router.post('/login', authController.login);
+
+router.get('/registration', authMiddleware, function (req, res, next){
+  res.render('registration', {title: 'Регистрация', Auth: req.isAuth});
 });
 
-router.get('/registration', function (req, res, next){
-  res.render('registration', {title: 'Регистрация'});
-});
+router.post('/registration', authController.registration);
 
 module.exports = router;

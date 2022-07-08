@@ -1,10 +1,16 @@
-<div class="registration-parent">
-    <div class="form">
-        <h1 class="reg">Регистрация</h1>
-        <input type="text" id="Login" placeholder="Введите логин">
-        <input type="password" id="Password" placeholder="Введите пароль">
-        <div id="Error"></div>
-        <input type="submit" class="Reg_button" id="button_reg" value="Зарегистрироваться">
+{{#if Auth}}
+    <div class="successAuth">
+        <h1>Вы успешно авторизированы.</h1>
     </div>
-</div>
-<script src="/javascripts/registration.js"></script>
+{{else}}
+    <div class="registration-parent">
+        <div class="form">
+            <h1 class="reg">Регистрация</h1>
+            <input type="text" id="Login" placeholder="Введите логин">
+            <input type="password" id="Password" placeholder="Введите пароль">
+            <div id="Error"></div>
+            <input type="submit" class="Reg_button" id="button_reg" value="Зарегистрироваться">
+        </div>
+    </div>
+    <script src="/javascripts/registration.js"></script>
+{{/if}}

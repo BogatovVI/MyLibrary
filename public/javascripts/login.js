@@ -1,4 +1,4 @@
-document.querySelector("#button_login").onclick = () => {
+document.querySelector("#button_login").onclick = async () => {
     let Login = document.getElementById("Login").value;
     let Password = document.getElementById("Password").value;
     let error = document.getElementById("Error");
@@ -16,5 +16,27 @@ document.querySelector("#button_login").onclick = () => {
     }
     else{
         error.textContent = "";
+        let data = {
+            username: Login,
+            password: Password
+        }
+        let headers = {
+            'Content-Type': 'application/json'
+        }
+        let response = await fetch('/login', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: headers
+        })
+        let json = await response.json();
+        const {message} = json;
+        const {token} = json
+        if (response.status === 200){
+            document.cookie = `token=${token}`;
+            window.location.href = '/';
+        }
+        else{
+            error.textContent = message;
+        }
     }
 }
