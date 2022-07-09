@@ -1,4 +1,3 @@
-
 class GetAuthControllers{
     getLoginPage (req, res){
         let User_info_id = false;

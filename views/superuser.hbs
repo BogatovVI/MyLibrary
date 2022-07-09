@@ -1,0 +1,18 @@
+<h1>Панель для супер-пользователя.</h1>
+
+<div class="rename_cat">
+        <h2>Изменение роли пользователя.</h2>
+        <p>Введите логин <input type="text" name="login"></p>
+        <input type="radio" name="role" checked value="Пользователь">Пользователь
+        <input type="radio" name="role" value="Админ">Админ
+        <input type="radio" name="role" value="Супер-пользователь">Супер-пользователь
+        <input type="submit" value="Изменить" class="renameRole" id="button_supuser">
+</div>
+<div class="Error_block" id="Error_supuser"></div>
+<div class="deleteUser">
+    <h2>Удаления пользователя.</h2>
+    <p>Введите логин <input type="text" name="loginDeleteUser"></p>
+    <input type="submit" value="Удалить" class="DeleteUserButton" id="button_supuser">
+</div>
+<div class="Error_block" id="Error_deleteUser"></div>
+<script src="/javascripts/superUser.js"></script>

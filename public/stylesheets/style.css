@@ -44,10 +44,13 @@ main{
     background: #062e24;
     color: #7fada2;
     min-height: 80vh;
+    padding-bottom: 4vh;
 }
 
 /* Стили для footer, картинок VK, GitHub */
 footer{
+    position: absolute;
+    width: 100%;
     font-family: 'Source Sans Pro', sans-serif;
     background: #0c6b52;
     color: #7fada2;
@@ -152,9 +155,48 @@ footer h2{
     margin-top: 10vh;
 }
 
+/* Стили для кнопок в личном кабинете */
 .users_button a{
     background: #7fada2;
     display: block;
     width: 30vh;
     margin-top: 2vh;
+}
+
+/* Стили панели супер-пользователя */
+.rename_cat{
+    border-top: #7fada2 solid 0.15vh;
+}
+
+.rename_cat input{
+    display: block;
+    margin-top: 2vh;
+}
+
+.Error_block{
+    margin-top: 2vh;
+    color: darkred;
+    margin-bottom: 2vh;
+}
+
+.deleteUser{
+    border-top: #7fada2 solid 0.15vh;
+}
+
+.deleteUser input{
+    display: block;
+    margin-top: 2vh;
+}
+
+#button_supuser{
+    background: #7fada2;
+    color: #062e24;
+    border-color: #7fada2;
+    border-radius: 0.5vh;
+}
+
+#button_supuser:hover{
+    background: #062e24;
+    color: #7fada2;
+    border-color: #7fada2;
 }

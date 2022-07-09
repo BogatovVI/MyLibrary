@@ -1,11 +1,7 @@
-const User = require('../models/User');
-
 class UsersControllers{
-    async SelectUser(req, res){
-        const user = req.user.id;
-        const candidate = await User.findOne({user});
-        const username = candidate.username;
-        res.render('Personal_Area', {title: "Личный кабинет", Auth: req.isAuth, User: username});
+    SelectUser(req, res){
+        const user = req.user.login;
+        res.render('Personal_Area', {title: "Личный кабинет", Auth: req.isAuth, User: user});
     }
 
     Logout(req, res){

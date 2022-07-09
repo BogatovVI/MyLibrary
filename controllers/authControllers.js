@@ -3,9 +3,10 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const {secret} = require("../config");
 
-const generateAccessToken = (id, rol) => {
+const generateAccessToken = (id, login, rol) => {
     const payload = {
         id,
+        login,
         rol
     }
     return jwt.sign(payload, secret, {expiresIn: "24h"})
@@ -40,7 +41,7 @@ class authControllers {
             if (!validPassword){
                 return res.status(400).json({message: "Введен неверный пароль."});
             }
-            const token = generateAccessToken(user._id, user.role);
+            const token = generateAccessToken(user._id, user.username, user.role);
             return res.json({token})
         } catch (e){
             console.log(e);
