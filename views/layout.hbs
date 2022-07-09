@@ -16,7 +16,7 @@
         <nav class="Menu">
             <div class="Logo"><a href="/">MyLibrary</a></div>
             {{#if Auth}}
-                <a class="Input" href="#">Личный кабинет</a>
+                <a class="Input" href="/users/{{User}}">Личный кабинет</a>
             {{else}}
                 <a class="Input" href="/registration">Регистрация</a>
                 <a class="Input" href="/login">Войти</a>

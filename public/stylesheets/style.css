@@ -151,3 +151,10 @@ footer h2{
 .registration-parent{
     margin-top: 10vh;
 }
+
+.users_button a{
+    background: #7fada2;
+    display: block;
+    width: 30vh;
+    margin-top: 2vh;
+}

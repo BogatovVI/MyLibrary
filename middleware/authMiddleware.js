@@ -18,7 +18,7 @@ module.exports = function (req, res, next){
         next();
     } catch (e) {
         console.log(e);
+        req.user = false;
         req.isAuth = false;
-        next()
     }
 }
