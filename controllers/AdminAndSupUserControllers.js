@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const {json} = require("express");
 
 class AdminAndSupUserControllers{
     AdminShow(req, res){
@@ -18,7 +19,7 @@ class AdminAndSupUserControllers{
         }
     }
 
-    async SuperUserShow(req, res){
+    async SuperUserShow(req, res){//здесь дописать выборку из базы данных пользователей для вывода в шаблон
         let User_info_id = false;
         if (!req.user){
             User_info_id = false;
@@ -38,7 +39,6 @@ class AdminAndSupUserControllers{
     async RenameRole(req, res){
         try{
             const {Login, Role} = req.body
-            console.log(req.body);
             const candidate = await User.findOne({username: Login});
             if(candidate){
                 await User.updateOne({username: Login}, {role: Role});
@@ -49,6 +49,31 @@ class AdminAndSupUserControllers{
             }
         } catch (e) {
             res.status(400).json({message: "Ошибка изменения роли."})
+        }
+    }
+
+    async DeleteUser(req, res){
+        try{
+            const {Login} = req.body;
+            const candidate = await User.findOne({username: Login})
+            if (candidate){
+                await User.deleteOne({username: Login})
+                return res.json({message: "Пользователь успешно удален."})
+            }
+            else{
+                return res.json({message: "Пользователь не найден."})
+            }
+        } catch (e) {
+            res.status(400).json({message: "Ошибка удаления пользователя."})
+        }
+    }
+
+    async GetUser(req, res){
+        try{
+            const candidates = await User.find()
+            res.json(candidates)
+        } catch (e) {
+            res.status(400).json({message: "Ошибка вывода пользователей."})
         }
     }
 }

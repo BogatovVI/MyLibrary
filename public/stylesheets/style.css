@@ -200,3 +200,30 @@ footer h2{
     color: #7fada2;
     border-color: #7fada2;
 }
+
+/* Стили списка пользователей в панели superuser */
+#list_user{
+    margin-top: 2vh;
+    border-top: #7fada2 solid 0.15vh;
+}
+
+#list_user ul li h3{
+    display: inline-block;
+    margin-right: 5vh;
+    width: 50vh;
+    padding-left: 1vh;
+    padding-top: 0.5vh;
+}
+
+#list_user ul li{
+    background: #0c6b52;
+    width: 120vh;
+    list-style: none;
+    border: #7fada2 solid 0.15vh;
+    margin-top: 1vh;
+    border-radius: 1vh;
+}
+
+#list_user h2{
+    margin-bottom: 2vh;
+}

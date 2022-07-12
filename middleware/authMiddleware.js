@@ -22,5 +22,6 @@ module.exports = function (req, res, next){
         console.log(e);
         req.user = false;
         req.isAuth = false;
+        next()
     }
 }
