@@ -1,1 +1,17 @@
-<h1>Панель для админа.</h1>
+<h1>Панель для админинстратора.</h1>
+<div id="list_book">
+    <h2>Список книг.</h2>
+</div>
+<div class="appBooks">
+    <h2>Создание книги.</h2>
+    <form id="appendBook">
+        <label>Автор <input type="text" name="author" required></label>
+        <label>Название <input type="text" name="name_book" required></label>
+        <label>Описание <textarea name="content" required></textarea></label>
+        <label>Картинка <input type="file" name="image" accept="image/*" required></label>
+        <label>Файл книги <input type="file" name="file_book" accept="application/pdf" required></label>
+        <div id="error_book"></div>
+        <input type="submit" value="Отправить" name="button_append_book">
+    </form>
+</div>
+<script src="/javascripts/admin.js"></script>

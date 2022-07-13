@@ -227,3 +227,94 @@ footer h2{
 #list_user h2{
     margin-bottom: 2vh;
 }
+
+/* Стили панеди администратора */
+.appBooks{
+    margin-top: 4vh;
+    border-top: #7fada2 solid 0.15vh;
+}
+
+.appBooks label{
+    display: block;
+    margin-top: 4vh;
+    width: 45vh;
+}
+
+.appBooks input{
+    display: block;
+    margin-left: auto;
+    width: 30vh;
+}
+
+.appBooks textarea[name^="content"]{
+    min-height: 30vh;
+    display: block;
+    margin-left: auto;
+    width: 30vh;
+}
+
+.appBooks input[name^="button_append_book"]{
+    margin-left: 15vh;
+    margin-top: 5vh;
+    background: #0c6b52;
+    color: #7fada2;
+    border-color: #0c6b52;
+}
+
+.appBooks input[name^="button_append_book"]:hover{
+    background: #062e24;
+    color: #7fada2;
+    border-color: #7fada2;
+}
+
+#error_book{
+    margin-top: 2vh;
+}
+
+/* Стили списка книг */
+#list_book{
+    margin-top: 2vh;
+    border-top: #7fada2 solid 0.15vh;
+}
+
+#list_book ul li h3{
+    display: inline-block;
+    margin-right: 5vh;
+    width: 60vh;
+    padding-left: 1vh;
+    padding-top: 0.5vh;
+}
+
+#list_book ul li{
+    background: #0c6b52;
+    width: 145vh;
+    list-style: none;
+    border: #7fada2 solid 0.15vh;
+    margin-top: 1vh;
+    border-radius: 1vh;
+}
+
+#list_book h2{
+    margin-bottom: 2vh;
+}
+
+/* Стили кнопки удаления книги */
+#delete_book_button{
+    background: darkred;
+    border-color: darkred;
+    color: #7fada2;
+    width: 10vh;
+    height: 4vh;
+}
+
+#delete_book_button:hover{
+    background: #0c6b52;
+    color: darkred;
+}
+
+/* Стили блока ошибка списка книг */
+#error_list_books{
+    color: darkred;
+    margin-left: 4vh;
+    margin-top: 4vh;
+}

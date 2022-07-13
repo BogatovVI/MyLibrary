@@ -11,7 +11,6 @@ async function getUser(){//Получение пользователей
         li.innerHTML = `<h3>Логин: ${obj.username}</h3><h3>Роль: ${obj.role}</h3>`
         ul.append(li)
     });
-    //Добавить обработку объекта json
 }
 
 getUser();//Вызов функции получения пользователей
@@ -42,6 +41,9 @@ document.querySelector(".renameRole").onclick = async () => {//Изменени�
         if (response.status === 200){
             error.textContent = message;
             error.style.color = 'green';
+            setTimeout(function() {
+                error.textContent = "";
+            }, 3000);
             let ul = document.getElementById("users");
             let li = document.getElementById("user");
             li.remove();
@@ -79,6 +81,9 @@ document.querySelector(".DeleteUserButton").onclick = async () => {//Удале�
         if (response.status === 200){
             error.textContent = message;
             error.style.color = 'green';
+            setTimeout(function() {
+                error.textContent = "";
+            }, 3000);
             let ul = document.getElementById("users");
             let li = document.getElementById("user");
             li.remove();

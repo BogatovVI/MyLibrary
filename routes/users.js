@@ -15,5 +15,11 @@ router.put('/superuser', AdminAndSupUserControllers.RenameRole);
 router.delete('/superuser/deleteUser', AdminAndSupUserControllers.DeleteUser)
 //Обрабатываем отправку пользователей
 router.get('/superuser/getUser', AdminAndSupUserControllers.GetUser)
+//Отправка данных о книге и создание
+router.post('/admin/appendBook', AdminAndSupUserControllers.appendBook)
+//Получение книг
+router.get('/admin/getBooks', AdminAndSupUserControllers.getBooks)
+//Удаление книги
+router.delete('/admin/deleteBook', AdminAndSupUserControllers.deleteBook)
 
 module.exports = router;
