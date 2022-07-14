@@ -318,3 +318,83 @@ footer h2{
     margin-left: 4vh;
     margin-top: 4vh;
 }
+
+/* Стили книг на главной странице */
+.book{
+    text-align: center;
+    display: inline-block;
+    border: #7fada2 solid 0.15vh;
+    width: 39vh;
+    height: 75vh;
+    background: #0c6b52;
+    margin-right: 5vh;
+    margin-top: 2vh;
+    border-radius: 1vh;
+}
+
+.bookButton{
+    width: 40vh;
+}
+
+.frame_img{
+    border-radius: 1vh;
+    border-bottom: #7fada2 solid 0.15vh;
+    margin: 0 auto;
+    width: 38.5vh;
+}
+
+.frame_img img{
+    border-radius: 1vh;
+    width: 100%;
+    height: 60vh;
+}
+
+.book a{
+    background: #062e24;
+    color: #7fada2;
+}
+
+.book a:hover{
+    border-color: #062e24;
+    color: #062e24;
+}
+
+/* Стили странички книги */
+.book_info{
+    min-height: 60vh;
+}
+
+.book_info p{
+    padding-right: 1vh;
+    text-align: justify;
+    overflow: scroll;
+    max-height: 42vh;
+}
+
+.book_info h2{
+}
+
+.frame_info_book{
+    margin-right: 1vh;
+    border-radius: 1vh;
+    float: left;
+    border: #7fada2 solid 0.15vh;
+    width: 40vh;
+}
+
+.downloadBook{
+    width: 100%;
+}
+
+.frame_info_book img{
+    border-radius: 1vh;
+    width: 100%;
+}
+
+.downloadBook a{
+    background: #7fada2;
+}
+
+.downloadBook h4{
+    color: darkred;
+}

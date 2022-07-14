@@ -1,1 +1,14 @@
-<h1>{{title}}</h1>
+<div class="home_books">
+    {{#each Books}}
+        <div class="book">
+            <div class="frame_img">
+                <img src="{{Path_img}}" alt="">
+            </div>
+            <h4>{{Author}}</h4>
+            <h4>{{Title}}</h4>
+            <div class="bookButton">
+                <a href="/book/{{_id}}" class="btn">Подробнее</a>
+            </div>
+        </div>
+    {{/each}}
+</div>

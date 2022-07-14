@@ -1,0 +1,15 @@
+<div class="book_info">
+    <div class="frame_info_book">
+        <img src="{{Book.Path_img}}">
+    </div>
+    <h2>{{Book.Author}}</h2>
+    <h2>{{Book.Title}}</h2>
+    <p>{{Book.Content}}</p>
+    <div class="downloadBook">
+        {{#if Auth}}
+            <a href="{{Book.Path_book_file}}" download class="btn">Скачать</a>
+        {{else}}
+            <h4>Для скачивания, вам нужно авторизироваться.</h4>
+        {{/if}}
+    </div>
+</div>
